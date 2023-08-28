@@ -1,0 +1,4 @@
+Throughout the course of this project, I had the opportunity to work on various aspects of the development of the CyberWin cybersecurity gaming and training system. The project encompassed both Phase 1, which focused on requirements analysis and stakeholder interviews, and Phase 2, which involved system design and interfacing with off-the-shelf and legacy components.
+
+During Phase 1, I and my team collaborated to identify the stakeholders in the proposed system and conducted interviews to gather valuable insights and clarify project details. This phase allowed me to experience the importance of effective communication and understanding the perspectives of different stakeholders. It was challenging yet rewarding to elicit requirements and analyze them to refine my understanding of the system's objectives.
+This has reading/wrinting materials.
