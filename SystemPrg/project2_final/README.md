@@ -27,8 +27,8 @@ Run the executable with appropriate command-line arguments:
     `./mysync [options] directory1 directory2`
 
 Options:
-  -a    Include hidden files in the comparison
-  -i    Ignore patterns specified in the command-line argument (yet to be implemented)
-  -n    Perform a trial run with no changes made
-  -r    Recursively compare and synchronize subdirectories
-  -v    Enable verbose output for detailed information
+-  -a    Include hidden files in the comparison
+-  -i    Ignore patterns specified in the command-line argument (yet to be implemented)
+-  -n    Perform a trial run with no changes made
+-  -r    Recursively compare and synchronize subdirectories
+-  -v    Enable verbose output for detailed information
