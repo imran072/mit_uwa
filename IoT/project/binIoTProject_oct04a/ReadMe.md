@@ -56,4 +56,5 @@ The communication between the device and the cloud happens in real-time. Follow 
 
 ​
 == Final Product
+
 ![smartbin project](image.png)
