@@ -55,3 +55,5 @@ The communication between the device and the cloud happens in real-time. Follow 
     * Users can access the cloud dashboard to monitor and control the bin remotely.​
 
 ​
+== Final Product
+![smartbin project](image.png)
