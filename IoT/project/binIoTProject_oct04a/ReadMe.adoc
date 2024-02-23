@@ -1,0 +1,88 @@
+:Author: imran072
+:Email: kaziimran072@gmail.com
+:Date: 04/10/2023
+:Revision: version#1
+
+
+= Project: Smart Garbage Bin IoT Project
+
+This repository contains the code and documentation for a Smart Garbage Bin IoT project developed as part of an academic endeavor. The project aims to create an intelligent waste management system that monitors bin capacity, detects motion, and provides real-time data visualization through a cloud-based platform. The system utilizes ultrasonic sensors, LEDs, a servo motor, and an ESP32 microcontroller, integrated with the Arduino IoT Cloud platform for remote monitoring and control.
+
+== Step 1: Installation
+Please describe the steps to install this project.
+
+For example:
+
+1. Open this file
+2. Edit as you like
+3. Release to the World!
+
+== Step 2: Assemble the circuit
+
+Assemble the circuit following the diagram layout.png attached to the sketch
+
+== Step 3: Load the code
+
+Upload the code contained in this sketch on to your board
+
+
+|===
+| ID | Part name      | Part number | Quantity
+| R1 | 10k Resistor   | 1234-abcd   | 10       
+| L1 | Red LED        | 2345-asdf   | 5        
+| A1 | Arduino Zero   | ABX00066    | 1        
+|===
+
+
+Smart Garbage Bin IoT Project README
+Overview
+This repository contains the code and documentation for a Smart Garbage Bin IoT project developed as part of an academic endeavor. The project aims to create an intelligent waste management system that monitors bin capacity, detects motion, and provides real-time data visualization through a cloud-based platform. The system utilizes ultrasonic sensors, LEDs, a servo motor, and an ESP32 microcontroller, integrated with the Arduino IoT Cloud platform for remote monitoring and control.
+
+Project Components
+Hardware Solution
+
+Cost: The project adhered to a budget of $50 for additional components. University-provided materials included the ESP32, Arduino Uno, Raspberry Pi, breadboard, jumper wires, servo motor, resistors, LEDs, and ultrasonic sensors.
+Availability: All components were locally sourced within Perth, Western Australia, to meet project deadlines.
+Size: The prototype's size was optimized to fit within a standard bin without affecting capacity.
+Power Requirements: Power management emphasized efficiency, with the motor activated only when detecting an object, conserving energy through intelligent duty cycle management.
+Communication Ability
+
+Wi-Fi connectivity was chosen for its widespread availability, making it suitable for commercial deployment.
+The ESP32 FireBeetle microcontroller was selected for its compact size, affordability, and compatibility with Wi-Fi communication.
+Sensors
+
+Ultrasonic sensors were used to measure bin capacity and detect approaching objects.
+Although an IR sensor was considered, availability issues led to the exclusive use of ultrasonic sensors.
+Servo Motor
+
+The Fitec FS90 servo motor was employed to open the bin lid, conserving power by operating only when necessary.
+Power consumption was minimized by activating the motor selectively based on detected motion.
+Microcontroller
+
+The ESP32 FireBeetle microcontroller was chosen for its compact size, affordability, and compatibility with the project requirements.
+Software
+Autonomous Operations and Decision Logic
+
+Local data acquisition and management were handled by the Arduino microcontroller, which processed sensor data to determine bin status and control actuators accordingly.
+Data Transmission to the Server
+
+Data exchange with the cloud server was facilitated through the Arduino IoT Cloud platform, ensuring secure and efficient communication.
+Wi-Fi connectivity and specific network credentials were configured to enable wireless communication with the cloud.
+Cloud-Based Data Management and Analytics
+
+Data collected from the bin was stored and managed on a cloud server, allowing for analytics, usage monitoring, and optimization of waste management strategies.
+User Interface and Interaction
+
+A user-friendly dashboard provided real-time visualization of bin status, usage analytics, and capacity levels.
+LED indicators and servo motor actions were synchronized with cloud data for seamless user interaction.
+Repository Structure
+arduino_secrets.h: Configuration file containing Wi-Fi network credentials and device key.
+binIotProject_oct04a.ino: Main Arduino sketch file containing setup and loop functions.
+sketch.json: Configuration file for Arduino IDE, specifying board settings and secrets.
+thingProperties.h: Header file defining cloud properties and initializing Arduino IoT Cloud.
+How to Use
+Clone the repository to your local machine.
+Open the Arduino IDE and load the binIotProject_oct04a.ino sketch.
+Configure the arduino_secrets.h file with your Wi-Fi network credentials and device key.
+Upload the sketch to your ESP32 microcontroller.
+Monitor the project's functionality through the Arduino IoT Cloud dashboard.
