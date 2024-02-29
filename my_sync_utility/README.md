@@ -17,7 +17,7 @@ To install MySync, follow these steps:
 1. Clone the repository from GitHub:
     `git clone https://github.com/imran072/mit_uwa.git`
 2. Navigate to the project directory:
-    `cd mit_uwa/SystemPrg/project2_final`
+    `cd mit_uwa/my_sync_utility`
 3. Compile the source code:
     `make`
 
