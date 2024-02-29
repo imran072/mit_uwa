@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+# author_name: Kazi Md Imran ID: 23846485
+
+# the script reads a tsv file and provide stats based on predefined commands
+
+
+# check if there are at least two arguments passed in
+if [[ $# < 2 ]]; then
+    echo "Error: file or command is missing. Two parameters are expected."
+    exit 1
+elif [[ $# > 2 ]]; then
+    echo "Parameters can not be more than two. Please give me file and command only."
+    exit 1
+fi
+
+# check if the file is valid or not
+if [[ ! -f $1 ]]; then
+    echo "Error: no valid file found as $1"
+    exit 1
+fi
+
+# find the state  with the highest number of incidents
+max_state_data=$(cut -d$'\t' -f2 $1 | sort | uniq -c | sort -nr | head -n1)
+max_state=$(echo ${max_state_data} | cut -d' ' -f2)
+max_state_count=$(echo ${max_state_data} | cut -d' ' -f1)
+
+# find the year with the highest number of incidents
+max_year_data=$(cut -d$'\t' -f8 $1 | tail -n +2 | sort | uniq -c | sort -nr | head -n1)
+max_year=$(echo ${max_year_data} | cut -d' ' -f2)
+max_year_count=$(echo ${max_year_data} | cut -d' ' -f1)
+
+# find the year with the highest number of incidents for the given state
+state_max_year_data=$(grep -w $2 $1 | cut -f8 | sort | uniq -c | sort -nr | head -n1)
+state_max_year=$(echo ${state_max_year_data} | cut -d' ' -f2)
+state_max_year_count=$(echo ${state_max_year_data} | cut -d' ' -f1)
+
+# find the state with the highest number of incidents for the given year
+year_max_state_data=$(grep -w $2 $1 | cut -f2 | sort | uniq -c | sort -nr | head -n1)
+year_max_state=$(echo ${year_max_state_data} | cut -d' ' -f2)
+year_max_state_count=$(echo ${year_max_state_data} | cut -d' ' -f1)
+
+# print based on the second argument passed in
+case $2 in
+    maxstate) 
+        echo "State with greatest number of incidents is: ${max_state} with count ${max_state_count}"
+        exit 0
+        ;;
+    maxyear) 
+        echo "Year with greatest number of incidents is: ${max_year} with count ${max_year_count}"
+        exit 0
+        ;;
+    [A-Z][A-Z])
+	echo "Year with greatest number of incidents for $2 is in ${state_max_year} with count ${state_max_year_count}"
+	exit 0
+	;;
+    [0-9][0-9][0-9][0-9])
+	echo "State with greatest number of incidents for $2 is in ${year_max_state} with count ${year_max_state_count}"
+	exit 0
+	;;
+    *) 
+        if [[ $2 == max* ]]; then
+        echo "The max commands are either maxstate or maxyear"
+        exit 2
+        else
+            echo "Something is wrong. Select your command from 'maxstate','maxyear','state code' and 'year'."
+            exit 3
+        fi
+        ;;
+esac
+

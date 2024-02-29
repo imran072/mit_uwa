@@ -1,0 +1,21 @@
+mysync : mysync.o global.o linked_list.o comp_dir.o sync_dir.o
+	cc -std=c99 -Wall -pedantic -Werror -o mysync \
+		mysync.o global.o linked_list.o comp_dir.o sync_dir.o -lm
+
+mysync.o : mysync.c mysync.h
+	cc -std=c99 -Wall -pedantic -Werror -o mysync.c
+
+global.o : global.c mysync.h
+	cc -std=c99 -Wall -pedantic -Werror -o global.c
+
+linked_list.o : linked_list.c mysync.h
+	cc -std=c99 -Wall -pedantic -Werror -o linked_list.c
+
+comp_dir.o : comp_dir.c mysync.h
+	cc -std=c99 -Wall -pedantic -Werror -o comp_dir.c
+
+sync_dir.o : sync_dir.c mysync.h
+	cc -std=c99 -Wall -pedantic -Werror -o sync_dir.c
+
+clean:
+	rm -f *.o mysync
