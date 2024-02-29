@@ -1,9 +1,3 @@
-- Author: imran072
-- Email: kaziimran072@gmail.com
-- Date: 04/10/2023
-- Revision: version#1
-
-
 # Project: Smart Garbage Bin IoT Project
 
 This repository contains the code and documentation for a Smart Garbage Bin IoT project developed as part of an academic endeavor. The project aims to create an intelligent waste management system that monitors bin capacity, detects motion, and provides real-time data visualization through a cloud-based platform. The system utilizes ultrasonic sensors, LEDs, a servo motor, and an ESP32 microcontroller, integrated with the Arduino IoT Cloud platform for remote monitoring and control.
