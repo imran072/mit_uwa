@@ -1,11 +1,11 @@
 # MySync
 
-MySync is a command-line tool for synchronizing directories efficiently. It compares the contents of two directories and ensures they are identical by copying missing files and updating existing ones. It offers various options for customizing the synchronization process.
+MySync is a command-line tool for synchronizing directories efficiently. It compares the contents of directories and ensures they are identical by copying missing files and updating existing ones. It offers various options for customizing the synchronization process.
 
 ## Features
 
 - **Directory Comparison**: Compare the contents of directories to identify differences.
-- **File Synchronization**: Synchronize files between directories, ensuring that both directories have the same files.
+- **File Synchronization**: Synchronize files between directories, ensuring that all directories have the same files.
 - **Recursive Comparison**: Support for recursively comparing and synchronizing subdirectories.
 - **Option Flags**: Customizable options for controlling the synchronization process, such as ignoring hidden files, copying only, verbose output, etc. (yet to be implemented)
 - **Linked List Implementation**: Utilizes a linked list data structure for efficient storage and manipulation of file information.
