@@ -1,20 +1,20 @@
-:Author: imran072
-:Email: kaziimran072@gmail.com
-:Date: 04/10/2023
-:Revision: version#1
+- Author: imran072
+- Email: kaziimran072@gmail.com
+- Date: 04/10/2023
+- Revision: version#1
 
 
-= Project: Smart Garbage Bin IoT Project
+# Project: Smart Garbage Bin IoT Project
 
 This repository contains the code and documentation for a Smart Garbage Bin IoT project developed as part of an academic endeavor. The project aims to create an intelligent waste management system that monitors bin capacity, detects motion, and provides real-time data visualization through a cloud-based platform. The system utilizes ultrasonic sensors, LEDs, a servo motor, and an ESP32 microcontroller, integrated with the Arduino IoT Cloud platform for remote monitoring and control.
 
-== Step 1: Assemble the Circuit
+## Step 1: Assemble the Circuit
 
 Assemble the circuit following the diagram layout.png attached to the sketch. Ensure all connections are made correctly according to the wiring diagram provided.
 
 ![smartbin project layout](layout.png)
 
-== Step 2: Load the Code
+## Step 2: Load the Code
 
 To load the code onto your microcontroller board, follow these steps:
 
@@ -25,7 +25,7 @@ To load the code onto your microcontroller board, follow these steps:
 5. Click on the "Upload" button in the Arduino IDE to compile and upload the code to your microcontroller board.
 6. Once the upload is complete, the code will start running on your board, and you can observe the behavior as per your project specifications.
 
-== Step 3: Device-Cloud Communication Setup
+## Step 3: Device-Cloud Communication Setup
 
 The communication between the device and the cloud happens in real-time. Follow these steps to set up the communication:
 
@@ -35,7 +35,7 @@ The communication between the device and the cloud happens in real-time. Follow 
 4. This connection handler uses the SSID and password to establish the connection.
 5. Initialize properties using the initProperties function, specifying their type (e.g., READ), update trigger (ON_CHANGE), and callback functions.
 
-== Key Functionalities
+## Key Functionalities
 1. Fill Level Monitoring​
     * Real-time monitoring of the bin's capacity using ultrasonic sensors.​
     * LED indicators change color based on the fill level.​
@@ -55,6 +55,6 @@ The communication between the device and the cloud happens in real-time. Follow 
     * Users can access the cloud dashboard to monitor and control the bin remotely.​
 
 ​
-== Final Product
+## Final Product
 
 ![smartbin project](image.png)
